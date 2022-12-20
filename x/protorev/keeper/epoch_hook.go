@@ -49,7 +49,6 @@ func (h EpochHooks) AfterEpochEnd(ctx sdk.Context, epochIdentifier string, epoch
 			} else {
 				h.k.SetDaysSinceGenesis(ctx, daysSinceGenesis+1)
 			}
-
 		}
 	}
 
