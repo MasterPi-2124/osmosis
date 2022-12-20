@@ -222,7 +222,7 @@ func (k Keeper) GetProtoRevEnabled(ctx sdk.Context) (bool, error) {
 	store := prefix.NewStore(ctx.KVStore(k.storeKey), types.KeyPrefixProtoRevEnabled)
 	bz := store.Get(types.KeyPrefixProtoRevEnabled)
 	if bz == nil {
-		// This should never happend as the module is initialized on genesis
+		// This should never happened as the module is initialized on genesis
 		return false, fmt.Errorf("protorev enabled/disabled configuration has not been set in state")
 	}
 
